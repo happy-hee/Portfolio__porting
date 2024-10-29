@@ -1,0 +1,168 @@
+body {
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: normal;
+}
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+.res_inner {
+  padding: 0 20px;
+}
+.dp_flex {
+  display: flex;
+}
+.t_bold {
+  font-weight: 600;
+}
+.btn {
+  padding: 10px 40px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btn_point {
+  border: 1px solid #84c400;
+  background-color: #84c400;
+  color: #fff;
+}
+.main_title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #84c400;
+}
+/* info */
+.learning_info_wrap {
+  padding: 0 20px 40px 20px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #eaeaea;
+}
+.learning_info {
+  display: flex;
+}
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  width: 320px;
+  height: 200px;
+}
+.thumbnail > img {
+  width: 100%;
+  filter: brightness(70%);
+}
+.thumbnail_play {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.info_left {
+  display: flex;
+  margin-right: 40px;
+  position: relative;
+}
+.info_title {
+  font-weight: 600;
+  font-size: 24px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.info_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info_text {
+  margin-bottom: 20px;
+}
+.sub_title {
+  font-weight: 600;
+}
+.sub_title::after {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #ddd;
+  content: "";
+  margin: 0 10px;
+}
+.sub_desc {
+  color: #999;
+}
+.section {
+  margin-bottom: 20px;
+}
+.section_title {
+  font-size: 18px;
+  padding-bottom: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #eaeaea;
+}
+.section_contents {
+  margin-bottom: 80px;
+  padding: 20px;
+  color: #555;
+}
+.contents_index {
+  margin-top: 20px;
+}
+.contents_index .item {
+  position: relative;
+  margin-bottom: 14px;
+  padding-left: 12px;
+}
+.contents_index .item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #84c400;
+  display: inline-block;
+}
+
+
+/* 미디어쿼리 */
+/* 타블렛 */
+@media all and (max-width: 1200px) { 
+
+} 
+/* 모바일 */
+@media all and (max-width: 768px) { 
+  .res_inner {
+    padding: 0 16px;
+  }
+  .learning_info_wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .learning_info {
+    flex-direction: column;
+  }
+  .info_left {
+    margin: 0 0 30px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .study_btn {
+    margin-top: 20px;
+  }
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+  .thumbnail_play {
+    width: 80px;
+    height: 80px;
+  }
+} 
