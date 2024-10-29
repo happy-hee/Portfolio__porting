@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
   <script script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-  <script src="../js/script.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -20,7 +19,7 @@
       <!-- 상단 -->
       <div class="learning_info_wrap">
         <div class="learning_info">
-          <div class="info_left">
+          <div class="info_left" onclick="openStudy()" tabindex="0">
             <div class="thumbnail">
               <img src="./images/thumbnail.png" alt="과정이미지">
             </div>
@@ -38,7 +37,7 @@
                 <div class="sub_desc">13:50</div>
               </div>
             </div>  
-            <button class="btn btn_point study_btn">학습하기</button>
+            <button class="btn btn_point study_btn" onclick="openStudy()">학습하기</button>
           </div>
         </div>
       </div>
@@ -74,4 +73,5 @@
     </div>
   </div>
 </body>
+<script src="../js/script.js"></script>
 </html>
