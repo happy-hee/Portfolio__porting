@@ -24,9 +24,9 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
-.btn_point {
-  border: 1px solid #84c400;
-  background-color: #84c400;
+.study_btn {
+  border: 1px solid #000;
+  background-color: #000;
   color: #fff;
 }
 .main_title {
