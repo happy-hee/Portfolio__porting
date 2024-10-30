@@ -1,13 +1,4 @@
 @charset "UTF-8";
-body {
-  background-color: #000;
-}
-
-.wrap {
-  width: 100%;
-  position: relative;
-}
-
 /* (접근성을 위한 텍스트 숨김 처리) */
 .a11y-hidden {
   position: absolute;
@@ -20,10 +11,6 @@ body {
 }
 
 .my-video-style {
-  overflow: hidden;
-  width: 1280px;
-  height: 720px;
-  position: relative;
   /* 스피드 */
   /* btn area */
   /* 페이징 */
@@ -290,18 +277,4 @@ body {
   padding: 0;
   margin-left: 20px;
   background-size: 34px;
-}
-.my-video-style .video_play_button {
-  width: 100px;
-  height: 100px;
-  background: url(../images/jplayer/play-button.png) center no-repeat;
-  background-size: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-}
-.my-video-style.jp-state-playing .video_play_button {
-  display: none;
 }
