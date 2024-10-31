@@ -26,7 +26,6 @@ body {
   position: relative;
   overflow: hidden;
   border: none;
-  /* 스피드 */
   /* 페이징 */
 }
 .my-video-style .jp-gui, .my-video-style .jpback {
@@ -224,11 +223,6 @@ body {
 .my-video-style .speed.on {
   color: #84c400;
 }
-.my-video-style .jp-full-screen {
-  width: 10px;
-  height: 10px;
-  margin-left: 12px;
-}
 .my-video-style .play {
   display: none;
   position: absolute;
@@ -306,7 +300,15 @@ body {
   display: none;
 }
 
-/* 전체화면 에서도 컨트롤버튼 표시 */
+/* 전체화면 스타일 */
+.jp-full-screen {
+  width: 18px;
+  height: 18px;
+  margin-left: 12px;
+  background: url(../images/jplayer/btn_full.png) center center no-repeat;
+  background-size: 18px;
+}
+
 .jp-state-full-screen .jp-gui {
   position: fixed;
   bottom: 0;
@@ -322,6 +324,10 @@ body {
 }
 .jp-state-full-screen .jp-controls .controls_left {
   width: auto;
+}
+.jp-state-full-screen .jp-full-screen {
+  background: url(../images/jplayer/btn_full_on.png) center center no-repeat;
+  background-size: 22px;
 }
 
 /* 미디어쿼리 */

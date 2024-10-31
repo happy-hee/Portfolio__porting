@@ -179,11 +179,6 @@ body {
   margin-left: 10px;
   flex-shrink: 0;
 }
-.my-video-style .jp-full-screen {
-  width: 10px;
-  height: 10px;
-  margin-left: 12px;
-}
 .my-video-style .play {
   display: none;
   position: absolute;
@@ -208,6 +203,15 @@ body {
 }
 
 /* 전체화면 스타일 */
+.jp-full-screen {
+  width: 18px;
+  height: 18px;
+  margin-left: 12px;
+  background: url(../images/jplayer/btn_full.png) center center no-repeat;
+  background-size: 18px;
+}
+
+.jp-video-full .jp-gui,
 .jp-state-full-screen .jp-gui {
   position: fixed;
   bottom: 0;
@@ -218,16 +222,24 @@ body {
   display: block !important;
   opacity: 1 !important;
 }
+.jp-video-full .jp-controls,
 .jp-state-full-screen .jp-controls {
   justify-content: center;
 }
+.jp-video-full .jp-controls .controls_left,
 .jp-state-full-screen .jp-controls .controls_left {
   width: auto;
 }
+.jp-video-full .jp-type-single,
 .jp-state-full-screen .jp-type-single {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.jp-video-full .jp-full-screen,
+.jp-state-full-screen .jp-full-screen {
+  background: url(../images/jplayer/btn_full_on.png) center center no-repeat;
+  background-size: 22px;
 }
 
 /* 미디어쿼리 */

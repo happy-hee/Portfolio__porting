@@ -251,18 +251,11 @@ body {
     color: #fff;
     display: none;
   }
-  
-  /* 스피드 */
+
   .speed {
     &.on {
       color: $point-color;
     }
-  }
-  
-  .jp-full-screen {
-    width: 10px;
-    height: 10px;
-    margin-left: 12px;
   }
   
   .play {
@@ -345,7 +338,15 @@ body {
   }
 }
 
-/* 전체화면 에서도 컨트롤버튼 표시 */
+/* 전체화면 스타일 */
+.jp-full-screen {
+  width: 18px;
+  height: 18px;
+  margin-left: 12px;
+  background: url(../images/jplayer/btn_full.png) center center no-repeat;
+  background-size: 18px;
+}
+
 .jp-state-full-screen {
   .jp-gui {
     position: fixed;
@@ -362,6 +363,10 @@ body {
     .controls_left {
       width: auto;
     }
+  }
+  .jp-full-screen {
+    background: url(../images/jplayer/btn_full_on.png) center center no-repeat;
+    background-size: 22px;
   }
 }
 
