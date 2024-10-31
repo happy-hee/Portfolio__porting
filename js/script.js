@@ -14,10 +14,10 @@ function openStudy() {
     let left = Math.ceil((window.screen.width - popupW)/2);
     let top = Math.ceil((window.screen.height - popupH)/2);
     // 팝업 띄우기
-    let popup = window.open("./contents/01/001.html", "학습창", `width=${popupW}px, height=${popupH}px, left=${left}, top=${top}`);
+    let popup = window.open("./contents/sources/01/001.html", "학습창", `width=${popupW}px, height=${popupH}px, left=${left}, top=${top}`);
   } else {
   // 모바일 접속일 경우
-    window.open("./mcontents/index.html", "_blank");
+    window.open("./contents/msources/index.html", "_blank");
   }
 }
 
