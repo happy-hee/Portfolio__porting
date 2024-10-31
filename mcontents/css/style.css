@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  background-color: #000;
+  background-color: #333;
 }
 
 .wrap {
@@ -19,15 +19,19 @@ body {
           clip-path: polygon(0 0, 0 0, 0 0);
 }
 
+#header {
+  padding: 14px 18px;
+  color: #fff;
+  font-size: 17px;
+  background-color: #222;
+}
+
 .my-video-style {
-  max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   border: none;
-  /* 스피드 */
-  /* 페이징 */
 }
 .my-video-style .jp-gui, .my-video-style .jpback {
   display: none;
@@ -41,6 +45,7 @@ body {
 }
 .my-video-style .jp-jplayer video {
   width: 100% !important;
+  height: auto !important;
 }
 .my-video-style .jp-video *:focus {
   outline: none;
@@ -53,6 +58,7 @@ body {
   overflow: hidden;
   border: none;
   cursor: pointer;
+  flex-shrink: 0;
 }
 .my-video-style .jp_poster_0 {
   width: 100%;
@@ -79,7 +85,7 @@ body {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .my-video-style .jp-controls .controls_left,
 .my-video-style .jp-controls .controls_right {
@@ -87,15 +93,15 @@ body {
   align-items: center;
 }
 .my-video-style .jp-play {
-  background: url("../images/jplayer/jp_play_btn.png") center center no-repeat;
+  background: url("../images/jplayer/jp_play_btn.png") left top no-repeat;
   background-color: transparent;
   padding: 0;
-  width: 19px;
+  width: 18px;
   height: 18px;
   margin: 0 20px 0 0;
 }
 .my-video-style.jp-state-playing .jp-play {
-  background: url("../images/jplayer/jp_pause_btn.png") center center no-repeat;
+  background: url("../images/jplayer/jp_pause_btn.png") left top no-repeat;
   background-color: transparent;
 }
 .my-video-style .jp-stop {
@@ -110,15 +116,6 @@ body {
 }
 .my-video-style .jp-stop:hover {
   background: url("../images/jplayer/jp_stop_btn_on.png") left top no-repeat;
-}
-.my-video-style .jp-replay {
-  width: 40px;
-  height: 30px;
-  padding: 0;
-  background: url("../images/jplayer/jp_replay_btn.png") left top no-repeat;
-}
-.my-video-style .jp-replay:hover {
-  background: url("../images/jplayer/jp_replay_btn_on.png") left top no-repeat;
 }
 .my-video-style .jp-current-time {
   display: inline-block;
@@ -170,54 +167,14 @@ body {
   display: flex;
   align-items: center;
 }
-.my-video-style .jp-volume-bar {
-  width: 80px;
-  height: 8px;
-  overflow: hidden;
-  background: #fff;
-  cursor: pointer;
-  border-radius: 8px;
-}
-.my-video-style .jp-volume-bar-value {
-  width: 0px;
-  height: 10px;
-  background: #84c400;
-}
 .my-video-style .jp-volume-controls button {
   display: block;
   overflow: hidden;
   text-indent: -9999px;
   border: none;
   cursor: pointer;
-  margin-right: 8px;
-}
-.my-video-style .jp-toggles {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-.my-video-style .jp-toggles button {
-  font-size: 13px;
-  color: #fff;
-  background: transparent;
-  text-indent: unset;
-  padding: 0 4px;
-}
-.my-video-style .jp-speed {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-.my-video-style .jp-toggles-text {
-  position: absolute;
-  left: 0;
-  top: 2px;
-  display: inline-block;
-  color: #fff;
-  display: none;
-}
-.my-video-style .speed.on {
-  color: #84c400;
+  margin-left: 10px;
+  flex-shrink: 0;
 }
 .my-video-style .jp-full-screen {
   width: 63px;
@@ -231,64 +188,11 @@ body {
   top: 50%;
   margin: -100px 0 0 -102px;
 }
-.my-video-style .paging {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  margin-left: 20px;
-}
-.my-video-style .paging strong {
-  font-weight: 600;
-}
-.my-video-style .paging .pageCurrent {
-  font-size: 18px;
-  color: #84c400;
-}
-.my-video-style .paging .pageBtn {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  margin: 0 0 0 0;
-}
-.my-video-style .paging .pagePrev {
-  background: url(../images/jplayer/btn_page_prev.png) left top no-repeat;
-}
-.my-video-style .paging .pageNext {
-  background: url(../images/jplayer/btn_page_next.png) left top no-repeat;
-}
-.my-video-style .paging .page_text {
-  margin: 0 4px;
-  font-size: 15px;
-}
-.my-video-style .paging .nextClick {
-  position: absolute;
-  bottom: 45px;
-  right: 16px;
-  display: none;
-}
-.my-video-style .paging .next_button {
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px 17px;
-  font-weight: bold;
-  border-radius: 500px;
-  line-height: normal;
-}
-.my-video-style .repeat_btn {
-  background: url(../images/jplayer/jp_replay_btn.png) center no-repeat;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  margin-left: 20px;
-  background-size: 34px;
-}
 .my-video-style .video_play_button {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background: url(../images/jplayer/play-button.png) center no-repeat;
-  background-size: 100px;
+  background-size: 50px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -309,20 +213,11 @@ body {
   .my-video-style .jp-play {
     margin: 0 10px 0 0;
   }
-  .my-video-style .jp-toggles {
-    margin-left: 16px;
-  }
-  .my-video-style .jp-toggles button {
-    font-size: 12px;
-  }
   .my-video-style .jp-progress {
-    width: 300px;
+    width: 100%;
   }
   .my-video-style .jp-volume-bar {
     display: none !important;
-  }
-  .my-video-style .repeat_btn {
-    margin-left: 16px;
   }
   .my-video-style .paging {
     margin-left: 10px;
@@ -333,4 +228,48 @@ body {
   .my-video-style .paging .pageCurrent {
     font-size: 16px;
   }
+}
+/* 페이징 */
+.paging {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+  margin-top: 20px;
+}
+.paging strong {
+  font-weight: 600;
+}
+.paging .pageCurrent {
+  color: #84c400;
+}
+.paging .pageBtn {
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  background-color: #111;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+.paging .page_text {
+  margin: 0 10px;
+  font-size: 18px;
+}
+.paging .nextClick {
+  position: absolute;
+  bottom: 45px;
+  right: 16px;
+  display: none;
+}
+.paging .next_button {
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 17px;
+  font-weight: bold;
+  border-radius: 500px;
+  line-height: normal;
 }
