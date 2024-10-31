@@ -30,12 +30,15 @@ totalPage[1] = "3";
 totalPage[2] = "3";
 totalPage[3] = "3";
 
-// 영상 경로
-// 영상 샘플(소리 X)
-let movieUrl = `../mp4/${chapter}_${page}.mp4`;
-// 소리나는 영상을 위해 유튜브에서 불러옴
-// let movieUrl = "";
+/**
+ * 영상 경로 불러오기
+ */
+// 사이트 URl 가져오기
+// let siteUrl = "https://unearthly-cackle-xpvr6xj9rrv2vppv-5500.app.github.dev" // 로컬(테스트)
+let siteUrl = "https://happy-hee.github.io/Portfolio__porting";
 
+// 영상 경로
+let movieUrl = `${siteUrl}/mp4/${chapter}_${page}.mp4`; 
 
 $(function(){
   /**
