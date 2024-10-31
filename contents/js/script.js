@@ -34,7 +34,7 @@ totalPage[3] = "3";
  * 영상 경로 불러오기
  */
 // 사이트 URl 가져오기
-// let siteUrl = "https://unearthly-cackle-xpvr6xj9rrv2vppv-5500.app.github.dev" // 로컬(테스트)
+// let siteUrl = "https://unearthly-cackle-xpvr6xj9rrv2vppv-5500.app.github.dev" // 테스트
 let siteUrl = "https://happy-hee.github.io/Portfolio__porting";
 
 // 영상 경로
@@ -60,8 +60,8 @@ $(function(){
     swfPath:'js',
     supplied:'m4v',
     size: {
-      width:'1280px',
-      height:'720px',
+      width:'100%',
+      height:'auto',
       cssClass:'my-video-style'
     },
     autoPlay: true,
@@ -106,6 +106,13 @@ $(function(){
   });
 
   // 화면 클릭시 재생/정지
+  $(".video_play_button").on("click", function(){
+    if($("#jp_container_1").is(".jp-state-playing")) {
+      $(this).jPlayer("pause");
+    } else {
+      $(this).jPlayer("play");
+    }
+  });
   $("#myPlayer").on("click", function(){ 
     if($("#jp_container_1").is(".jp-state-playing")) {
       $(this).jPlayer("pause");
