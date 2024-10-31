@@ -334,6 +334,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
+    pointer-events: none;
   }
   &.jp-state-playing .video_play_button {
     display: none;

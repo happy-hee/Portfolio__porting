@@ -30,9 +30,11 @@ totalPage[1] = "3";
 totalPage[2] = "3";
 totalPage[3] = "3";
 
+
 /**
  * 영상 경로 불러오기
  */
+
 // 사이트 URl 가져오기
 // let siteUrl = "https://unearthly-cackle-xpvr6xj9rrv2vppv-5500.app.github.dev" // 테스트
 let siteUrl = "https://happy-hee.github.io/Portfolio__porting";
@@ -40,11 +42,12 @@ let siteUrl = "https://happy-hee.github.io/Portfolio__porting";
 // 영상 경로
 let movieUrl = `${siteUrl}/mp4/${chapter}_${page}.mp4`; 
 
+
+/**
+ * 플레이어 스크립트
+ * jPlayer (https://jplayer.org/)
+ */
 $(function(){
-  /**
-   * 플레이어 스크립트
-   * jPlayer (https://jplayer.org/)
-   */
   $('#myPlayer').jPlayer({
     ready: function () {
       $(this).jPlayer('setMedia', {
@@ -106,23 +109,33 @@ $(function(){
   });
 
   // 화면 클릭시 재생/정지
-  $(".video_play_button").on("click", function(){
-    if($("#jp_container_1").is(".jp-state-playing")) {
-      $(this).jPlayer("pause");
-    } else {
-      $(this).jPlayer("play");
-    }
-  });
-  $("#myPlayer").on("click", function(){ 
-    if($("#jp_container_1").is(".jp-state-playing")) {
-      $(this).jPlayer("pause");
-    } else {
-      $(this).jPlayer("play");
-    }
-  });
+  function clickPlay(el) {
+    $(el).on("click", function(){
+      if($("#jp_container_1").is(".jp-state-playing")) {
+        $(this).jPlayer("pause");
+      } else {
+        $(this).jPlayer("play");
+      }
+    });
+  }
+  // 화면 터치시 재생/정지
+  function touchPlay(el) {
+    $(el).on("click", function(){
+      if($("#jp_container_1").is(".jp-state-playing")) {
+        $(this).jPlayer("pause");
+      } else {
+        $(this).jPlayer("play");
+      }
+    });
+  }
+  clickPlay(".video_play_button");
+  touchPlay(".video_play_button");
+  clickPlay("#myPlayer");
+  touchPlay("#myPlayer");
 
   // (접근성) 자동으로 추가되는 img 제거
   $("#jp_poster_0").remove();
+
 
   /**
    * 페이징
