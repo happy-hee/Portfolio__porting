@@ -17,7 +17,7 @@
   <div class="wrap">
     <div class="player">
       <!-- 영상 플레이어 -->
-      <div id="jp_container_1" class="jp-video " role="application" aria-label="media player">
+      <div id="jp_container_1" class="jp-video my-video-style" role="application" aria-label="media player">
         <div class="jp-type-single">
           <div id="myPlayer" class="jp-jplayer"></div>
           <!-- 영상 컨트롤 버튼 -->
@@ -32,13 +32,13 @@
                     </button>
                     
                     <!-- 재생바/시간 -->
-                    <div class="jp-current-time" role="timer" aria-label="time"></div>
+                    <div class="jp_time jp-current-time" role="timer" aria-label="time"></div>
                     <div class="jp-progress">
                       <div class="jp-seek-bar">
                         <div class="jp-play-bar"></div>
                       </div>
                     </div>
-                    <div class="jp-duration" role="timer" aria-label="duration"></div>
+                    <div class="jp_time jp-duration" role="timer" aria-label="duration"></div>
 
                     <!-- 속도 -->
                     <div class="jp-toggles">
@@ -54,6 +54,11 @@
                     <!-- 다시보기 -->
                     <button class="repeat_btn">
                       <span class="a11y-hidden">다시보기</span>
+                    </button>
+
+                    <!-- 전체화면 -->
+                    <button class="jp-full-screen" role="button" tabindex="0">
+                      <span class="a11y-hidden">전체화면</span>
                     </button>
                   </div>
                   <div class="controls_right">
