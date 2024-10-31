@@ -31,6 +31,9 @@ body {
   overflow: hidden;
   border:none;
 
+  .jp-type-single {
+    position: relative;
+  }
   .jp-gui, .jpback {
     display: none;
   }
@@ -204,9 +207,9 @@ body {
   }
 
   .jp-full-screen {
-    width: 63px;
-    height: 17px;
-    background: url('../images/jplayer/jp_speed_img.png') -114px 0px no-repeat;
+    width: 10px;
+    height: 10px;
+    margin-left: 12px;
   }
   
   .play {
@@ -231,6 +234,31 @@ body {
   }
   &.jp-state-playing .video_play_button {
     display: none;
+  }
+}
+
+/* 전체화면 스타일 */
+.jp-state-full-screen {
+  .jp-gui {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    z-index: 1000;
+    display: block !important;
+    opacity: 1 !important;
+  }
+  .jp-controls {
+    justify-content: center;
+    .controls_left {
+      width: auto;
+    }
+  }
+  .jp-type-single {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 

@@ -33,6 +33,9 @@ body {
   overflow: hidden;
   border: none;
 }
+.my-video-style .jp-type-single {
+  position: relative;
+}
 .my-video-style .jp-gui, .my-video-style .jpback {
   display: none;
 }
@@ -177,9 +180,9 @@ body {
   flex-shrink: 0;
 }
 .my-video-style .jp-full-screen {
-  width: 63px;
-  height: 17px;
-  background: url("../images/jplayer/jp_speed_img.png") -114px 0px no-repeat;
+  width: 10px;
+  height: 10px;
+  margin-left: 12px;
 }
 .my-video-style .play {
   display: none;
@@ -202,6 +205,29 @@ body {
 }
 .my-video-style.jp-state-playing .video_play_button {
   display: none;
+}
+
+/* 전체화면 스타일 */
+.jp-state-full-screen .jp-gui {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  z-index: 1000;
+  display: block !important;
+  opacity: 1 !important;
+}
+.jp-state-full-screen .jp-controls {
+  justify-content: center;
+}
+.jp-state-full-screen .jp-controls .controls_left {
+  width: auto;
+}
+.jp-state-full-screen .jp-type-single {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* 미디어쿼리 */

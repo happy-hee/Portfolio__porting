@@ -45,8 +45,7 @@ $(function(){
       supplied:'m4v',
       size: {
         width:'100%',
-        height:'auto',
-        cssClass:'my-video-style'
+        height:'auto'
       },
       autoPlay: false,
       useStateClassSkin: true,
