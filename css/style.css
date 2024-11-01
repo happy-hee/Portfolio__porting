@@ -24,11 +24,7 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
-.study_btn {
-  border: 1px solid #000;
-  background-color: #000;
-  color: #fff;
-}
+
 .main_title {
   font-size: 24px;
   font-weight: 600;
@@ -39,7 +35,7 @@ body {
 /* info */
 .learning_info_wrap {
   padding: 0 20px 40px 20px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   border-bottom: 1px solid #eaeaea;
 }
 .learning_info {
@@ -98,6 +94,31 @@ body {
 .sub_desc {
   color: #666;
 }
+.info_click_wrap {
+  display: flex;
+  align-items: center;
+}
+.click_text {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  animation-name: shakeX;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #333;
+}
+.click_text_img {
+  width: 26px;
+  height: auto;
+  margin-right: 6px;
+}
+.study_btn {
+  width: 180px;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
 .section {
   margin-bottom: 20px;
 }
@@ -132,6 +153,23 @@ body {
   display: inline-block;
 }
 
+@keyframes shakeX {
+  from {
+    margin-left: 10px;
+  }
+  to {
+    margin-left: 17px;
+  }
+}
+@keyframes shakeY {
+  from {
+    bottom: 0px;
+  }
+
+  to {
+    bottom: 5px;
+  }
+}
 
 /* 미디어쿼리 */
 /* 타블렛 */
@@ -149,8 +187,9 @@ body {
   .learning_info_wrap {
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 20px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 0;
   }
   .learning_info {
     flex-direction: column;
@@ -161,6 +200,7 @@ body {
     justify-content: center;
   }
   .study_btn {
+    width: 100%;
     margin-top: 20px;
   }
   .thumbnail {
@@ -180,5 +220,19 @@ body {
   }
   .section_contents {
     margin-bottom: 20px;
+  }
+  .info_click_wrap {
+    flex-direction: column;
+    padding-bottom: 40px;
+    position: relative;
+  }
+  .click_text {
+    position: absolute;
+    bottom: -10px;
+    animation-name: shakeY;
+    animation-duration: 0.5s;
+  }
+  .click_text_img {
+    transform: rotate(90deg) rotateX(180deg);
   }
 } 
